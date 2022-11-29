@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/blankFragmentHome">
+
+    <fragment
+        android:id="@+id/blankFragmentHome"
+        android:name="com.example.onepiecepedia.BlankFragmentHome"
+        android:label="fragment_blank_home"
+        tools:layout="@layout/fragment_blank_home" >
+        <action
+            android:id="@+id/action_blankFragmentHome_to_blankFragmentDescription"
+            app:destination="@id/blankFragmentDescription" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentDescription"
+        android:name="com.example.onepiecepedia.BlankFragmentDescription"
+        android:label="fragment_blank_description"
+        tools:layout="@layout/fragment_blank_description" >
+        <argument
+            android:name="characterId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+    </fragment>
+</navigation>
